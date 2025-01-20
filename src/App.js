@@ -27,7 +27,7 @@ function App() {
     };
 
     return (
-        <Router>
+        <Router basename="/pac-handbook">
             <div>
                 <Header onSearch={handleSearch} />
                 <Routes>
