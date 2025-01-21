@@ -26,6 +26,14 @@ import ECGRecommendations from "./components/ECGRecommendations";
 import ECHORecommendations from "./components/ECHORecommendations";
 import CARPREGSystem from "./components/CARPREGSystem";
 import ZAHARASystem from "./components/ZAHARASystem";
+import ArozullahIndex from "./components/ArozullahIndex";
+import DyspneaScale from "./components/DyspneaScale";
+import BedsidePFTs from "./components/BedsidePFTs";
+import ThreeLeggedStool from "./components/ThreeLeggedStool";
+import ThoracicSurgeryFlowchart from "./components/ThoracicSurgeryFlowchart";
+import PreoperativeReintubationRisk from "./components/PreoperativeReintubationRisk";
+import PulmonaryComplicationsClassification from "./components/PlumonaryComplicationsClassification";
+import PreoperativeRespiratoryPredictors from "./components/PreoperativeRespiratoryPredictors";
 
 const pages = [
     { name: "Risk Factor Proforma", tags: ["general"] },
@@ -50,6 +58,14 @@ const pages = [
     { name: "Do I Need to Ask for ECHO", tags: ["echo", "recommendation", "cardio"] },
     { name: "CARPREG System", tags: ["carpreg", "pregnancy", "cardio"] },
     { name: "ZAHARA System", tags: ["zahara", "pregnancy", "cardio"] },
+    { name: "Arozullah Respiratory Failure Index", tags: ["respiratory", "risk", "failure"] },
+    { name: "Dyspnea Scale", tags: ["dyspnea", "breathlessness", "scale"] },
+    { name: "Bedside PFTs", tags: ["pfts", "pulmonary", "tests"] },
+    { name: "Three legged stool", tags: ["thoracic", "surgery", "assessment"] },
+    { name: "Flowchart for Thoracic Surgery Assessment", tags: ["thoracic", "surgery", "flowchart"] },
+    { name: "Preoperative Reintubation Risk", tags: ["risk factors", "reintubation", "preoperative"] },
+    { name: "Pulmonary Complications classification", tags: ["thoracic", "abdominal", "pulmonary", "risk"] },
+    { name: "Preoperative Respiratory Predictors", tags: ["respiratory", "failures", "preoperative"] },
 
 ];
 
@@ -96,7 +112,14 @@ function App() {
                     <Route path="/do-i-need-to-ask-for-echo" element={<ECHORecommendations />} />
                     <Route path="/carpreg-system" element={<CARPREGSystem />} />
                     <Route path="/zahara-system" element={<ZAHARASystem />} />
-
+                    <Route path="/arozullah-respiratory-failure-index" element={<ArozullahIndex />} />
+                    <Route path="/dyspnea-scale" element={<DyspneaScale />} />
+                    <Route path="/bedside-pfts" element={<BedsidePFTs />} />
+                    <Route path="/three-legged-stool" element={<ThreeLeggedStool />} />
+                    <Route path="/flowchart-for-thoracic-surgery-assessment" element={<ThoracicSurgeryFlowchart />} />
+                    <Route path="/preoperative-reintubation-risk" element={<PreoperativeReintubationRisk />} />
+                    <Route path="/pulmonary-complications-classification" element={<PulmonaryComplicationsClassification />} />
+                    <Route path="/preoperative-respiratory-predictors" element={<PreoperativeRespiratoryPredictors />} />
 
                     {pages.map((page, index) => (
                         <Route
