@@ -32,8 +32,23 @@ import BedsidePFTs from "./components/BedsidePFTs";
 import ThreeLeggedStool from "./components/ThreeLeggedStool";
 import ThoracicSurgeryFlowchart from "./components/ThoracicSurgeryFlowchart";
 import PreoperativeReintubationRisk from "./components/PreoperativeReintubationRisk";
-import PulmonaryComplicationsClassification from "./components/PlumonaryComplicationsClassification";
 import PreoperativeRespiratoryPredictors from "./components/PreoperativeRespiratoryPredictors";
+import PulmonaryComplicationsClassification from "./components/PulmonaryComplicationsClassification";
+import PostoperativePneumoniaRisk from "./components/PostoperativePneumoniaRisk";
+import PreoperativeRespiratoryFailureRisk2007 from "./components/PreoperativeRespiratoryFailureRisk2007";
+import AriscatPulmonaryRiskScoring from "./components/AriscatPulmonaryRiskScoring";
+import ClinicalPulmonaryInfectionScore from "./components/ClinicalPulmonaryInfectionScore";
+import BODEIndex from "./components/BODEIndex";
+import GCS from "./components/GCS";
+import RenalRiskEvaluation from "./components/RenalRiskEvaluation";
+import HuntAndHessAndWFNSGrades from "./components/HuntAndHessAndWFNSGrades";
+import RiskFactorsForAKIAndCKDClassification from "./components/RiskFactorsForAKIAndCKDClassification";
+import ChildTurcottePughScoringSystem from "./components/ChildTurcottePughScoringSystem";
+import CirrhosisSurgicalRiskScore from "./components/CirrhosisSurgicalRiskScore";
+import FrailtyScale from "./components/FrailtyScale";
+import MMSE from "./components/MMSE";
+import MiniMentalStateExamination from "./components/MMSE";
+import MMSEInteractive from "./components/MMSE";
 
 const pages = [
     { name: "Risk Factor Proforma", tags: ["general"] },
@@ -66,6 +81,20 @@ const pages = [
     { name: "Preoperative Reintubation Risk", tags: ["risk factors", "reintubation", "preoperative"] },
     { name: "Pulmonary Complications classification", tags: ["thoracic", "abdominal", "pulmonary", "risk"] },
     { name: "Preoperative Respiratory Predictors", tags: ["respiratory", "failures", "preoperative"] },
+    { name: "Postoperative Pneumonia Risk Index", tags: ["postoperative", "pneumonia", "risk"] },
+    { name: "Preoperative Respiratory Failure Risk 2007", tags: ["preoperative", "respiratory failure", "risk", "2007"] },
+    { name: "ARISCAT Pulmonary Risk Scoring", tags: ["ariscat", "pulmonary", "risk", "scoring"] },
+    { name: "Clinical Pulmonary Infection Score", tags: ["cpis", "infection", "pulmonary", "score"] },
+    { name: "The BODE Index", tags: ["bode", "mortality", "risk", "index"] },
+    { name: "GCS", tags: ["gcs", "glasgow", "coma", "scale", "risk"] },
+    { name: "Hunt Hess And WFNS Grades for SAH", tags: ["hunt and hess", "wfns", "sah", "neurology"] },
+    { name: "Renal Risk Evaluation", tags: ["renal", "risk evaluation", "rifle", "akin", "kdigo", "aki"] },
+    { name: "Risk Factors for AKI and CKD Classification", tags: ["aki", "ckd", "renal", "classification", "risk factors"] },
+    { name: "Child-Turcotte Pugh Scoring System", tags: ["hepatic", "risk", "ctp", "child turcotte pugh"] },
+    { name: "Cirrhosis Surgical Risk Score", tags: ["cirrhosis", "hepatic", "risk", "surgery", "MELD"] },
+    { name: "Frailty Scale", tags: ["frailty", "dementia", "geriatric", "risk", "assessment"] },
+    { name: "MMSE", tags: ["mmse", "cognitive", "assessment"] },
+
 
 ];
 
@@ -120,6 +149,21 @@ function App() {
                     <Route path="/preoperative-reintubation-risk" element={<PreoperativeReintubationRisk />} />
                     <Route path="/pulmonary-complications-classification" element={<PulmonaryComplicationsClassification />} />
                     <Route path="/preoperative-respiratory-predictors" element={<PreoperativeRespiratoryPredictors />} />
+                    <Route path="/postoperative-pneumonia-risk-index" element={<PostoperativePneumoniaRisk />} />
+                    <Route path="/preoperative-respiratory-failure-risk-2007" element={<PreoperativeRespiratoryFailureRisk2007 />} />
+                    <Route path="/ariscat-pulmonary-risk-scoring" element={<AriscatPulmonaryRiskScoring />} />
+                    <Route path="/clinical-pulmonary-infection-score" element={<ClinicalPulmonaryInfectionScore />} />
+                    <Route path="/the-bode-index" element={<BODEIndex />} />
+                    <Route path="/gcs" element={<GCS />} />
+                    <Route path="/hunt-hess-and-wfns-grades-for-sah" element={<HuntAndHessAndWFNSGrades />} />
+                    <Route path="/renal-risk-evaluation" element={<RenalRiskEvaluation />} />
+                    <Route path="/risk-factors-for-aki-and-ckd-classification" element={<RiskFactorsForAKIAndCKDClassification />} />
+                    <Route path="/child-turcotte-pugh-scoring-system" element={<ChildTurcottePughScoringSystem />} />
+                    <Route path="/cirrhosis-surgical-risk-score" element={<CirrhosisSurgicalRiskScore />} />
+                    <Route path="/frailty-scale" element={<FrailtyScale />} />
+                    <Route path="/mmse" element={<MMSEInteractive />} />
+
+
 
                     {pages.map((page, index) => (
                         <Route
