@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Header({ onSearch }) {
     const [searchQuery, setSearchQuery] = useState("");
+    const location = useLocation();
 
     const handleInputChange = (e) => {
         const query = e.target.value;
         setSearchQuery(query);
         onSearch(query);
     };
+
+    const isHomePage = location.pathname === "/";
 
     return (
         <header style={headerStyle}>
@@ -17,13 +20,15 @@ function Header({ onSearch }) {
                     PAC Handbook
                 </Link>
             </div>
-            <input
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={handleInputChange}
-                style={searchBarStyle}
-            />
+            {isHomePage && (
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    value={searchQuery}
+                    onChange={handleInputChange}
+                    style={searchBarStyle}
+                />
+            )}
         </header>
     );
 }

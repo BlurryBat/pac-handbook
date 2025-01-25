@@ -46,9 +46,26 @@ import RiskFactorsForAKIAndCKDClassification from "./components/RiskFactorsForAK
 import ChildTurcottePughScoringSystem from "./components/ChildTurcottePughScoringSystem";
 import CirrhosisSurgicalRiskScore from "./components/CirrhosisSurgicalRiskScore";
 import FrailtyScale from "./components/FrailtyScale";
-import MMSE from "./components/MMSE";
-import MiniMentalStateExamination from "./components/MMSE";
 import MMSEInteractive from "./components/MMSE";
+import CSHAFrailtyScale from "./components/CSHAFrailtyScale";
+import FrailtyScreeningTools from "./components/FrailtyScreeningTools";
+import CognitiveScreeningTools from "./components/CognitiveScreeningTools";
+import FrailtyToolsAndScoringSystems from "./components/FrailtyToolsAndScoringSystems";
+import OncosurgicalRiskAssessment from "./components/OncoSurgicalRiskAssessment";
+import ECOGPerformanceStatusScale from "./components/ECOGPerformanceStatusScale";
+import PreoperativeNutritionRiskScreening from "./components/PreoperativeNutritionRiskScreening";
+import PONSNutritionCarePathway from "./components/PreoperativeNutritionCarePathway";
+import PreoperativeManagementMedications from "./components/PreoperativeManagementMedications";
+import AnticoagulationRisk from "./components/AntiCoagulationRisk";
+import AnticoagulantsNeuraxialAnesthesia from "./components/AnticoagulantsNeuraxialAnesthesia";
+import AnticoagulantManagement from "./components/AnticoagulantManagement";
+import AnticoagulantRecommendations from "./components/AnticoagulantRecommendations";
+import HeparinRecommendations from "./components/HeparinRecommendations";
+import DOACConsensus from "./components/DOACConsensus";
+import DOACConsensusUpdated from "./components/DOACConsensusUpdated";
+import OrthopedicsRiskAssessment from "./components/OrthopedicsRiskAssessment";
+import PsychotropicDrugGuidelines from "./components/PsychotropicDrugGuidelines";
+import ISAInvestigationGuidelines from "./components/ISAInvestigationGuidelines";
 
 const pages = [
     { name: "Risk Factor Proforma", tags: ["general"] },
@@ -94,6 +111,25 @@ const pages = [
     { name: "Cirrhosis Surgical Risk Score", tags: ["cirrhosis", "hepatic", "risk", "surgery", "MELD"] },
     { name: "Frailty Scale", tags: ["frailty", "dementia", "geriatric", "risk", "assessment"] },
     { name: "MMSE", tags: ["mmse", "cognitive", "assessment"] },
+    { name: "CSHA Frailty Scale", tags: ["frailty", "geriatrics", "csha", "assessment"] },
+    { name: "Frailty Screening Tools", tags: ["frailty", "screening", "geriatrics", "assessment"] },
+    { name: "Cognitive Screening Tools", tags: ["cognitive", "screening", "assessment", "tools"] },
+    { name: "Frailty Tools and Scoring Systems", tags: ["frailty", "tools", "scoring", "assessment"] },
+    { name: "Oncosurgical Risk Assessment", tags: ["oncology", "risk", "checklist"] },
+    { name: "ECOG Performance Status Scale", tags: ["ecog", "oncology", "performance", "status"] },
+    { name: "Preoperative Nutrition Risk Screening", tags: ["nutrition", "risk", "screening", "preoperative"] },
+    { name: "PONS Nutrition Care Pathway", tags: ["PONS", "nutrition", "preoperative", "care pathway"] },
+    { name: "Preoperative Management of Medications", tags: ["preoperative", "medications", "surgery preparation"] },
+    { name: "Anticoagulation Risk", tags: ["anticoagulants", "neuraxial anesthesia", "risk"] },
+    { name: "Anticoagulants and Neuraxial Anesthesia", tags: ["anticoagulants", "neuraxial anesthesia", "risk", "regional anesthesia"] },
+    { name: "Anticoagulant Management", tags: ["anticoagulants", "surgery", "guidelines", "tsoacs"] },
+    { name: "Anticoagulant Recommendations", tags: ["anticoagulants", "recommendations", "guidelines"] },
+    { name: "Heparin Recommendations", tags: ["heparin", "recommendations", "anticoagulation"] },
+    { name: "DOAC Consensus", tags: ["doac", "anticoagulation", "preoperative"] },
+    { name: "DOAC Consensus Updated", tags: ["doac", "anticoagulation", "preoperative", "bleeding risk"] },
+    { name: "Orthopedics Risk Assessment", tags: ["orthopedics", "fat embolism", "diagnostic criteria", "risk assessment"] },
+    { name: "Psychotropic Drug Guidelines", tags: ["antipsychotics", "perioperative", "psychotropic", "drug guidelines"] },
+    { name: "ISA Practice Guidelines for Preoperative Investigations", tags: ["ISA", "preoperative", "investigations", "guidelines"] },
 
 
 ];
@@ -162,8 +198,25 @@ function App() {
                     <Route path="/cirrhosis-surgical-risk-score" element={<CirrhosisSurgicalRiskScore />} />
                     <Route path="/frailty-scale" element={<FrailtyScale />} />
                     <Route path="/mmse" element={<MMSEInteractive />} />
-
-
+                    <Route path="/csha-frailty-scale" element={<CSHAFrailtyScale />} />
+                    <Route path="/frailty-screening-tools" element={<FrailtyScreeningTools />} />
+                    <Route path="/cognitive-screening-tools" element={<CognitiveScreeningTools />} />
+                    <Route path="/frailty-tools-and-scoring-systems" element={<FrailtyToolsAndScoringSystems />}/>
+                    <Route path="/oncosurgical-risk-assessment" element={<OncosurgicalRiskAssessment />}/>
+                    <Route path="/ecog-performance-status-scale" element={<ECOGPerformanceStatusScale />}/>
+                    <Route path="/preoperative-nutrition-risk-screening" element={<PreoperativeNutritionRiskScreening />}/>
+                    <Route path="/pons-nutrition-care-pathway" element={<PONSNutritionCarePathway />} />
+                    <Route path="/preoperative-management-of-medications" element={<PreoperativeManagementMedications />} />
+                    <Route path="/anticoagulation-risk" element={<AnticoagulationRisk />} />
+                    <Route path="/anticoagulants-and-neuraxial-anesthesia" element={<AnticoagulantsNeuraxialAnesthesia />} />
+                    <Route path="/anticoagulant-management" element={<AnticoagulantManagement />} />
+                    <Route path="/anticoagulant-recommendations" element={<AnticoagulantRecommendations />} />
+                    <Route path="/heparin-recommendations" element={<HeparinRecommendations />} />
+                    <Route path="/doac-consensus" element={<DOACConsensus />} />
+                    <Route path="/doac-consensus-updated" element={<DOACConsensusUpdated />} />
+                    <Route path="/orthopedics-risk-assessment" element={<OrthopedicsRiskAssessment />} />
+                    <Route path="/psychotropic-drug-guidelines" element={<PsychotropicDrugGuidelines />} />
+                    <Route path="/isa-practice-guidelines-for-preoperative-investigations" element={<ISAInvestigationGuidelines />} />
 
                     {pages.map((page, index) => (
                         <Route
