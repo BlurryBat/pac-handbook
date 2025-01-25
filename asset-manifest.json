@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pac-handbook/static/css/main.e6c13ad2.css",
-    "main.js": "/pac-handbook/static/js/main.f29589f0.js",
+    "main.js": "/pac-handbook/static/js/main.67afb63f.js",
     "static/js/488.49047cac.chunk.js": "/pac-handbook/static/js/488.49047cac.chunk.js",
     "index.html": "/pac-handbook/index.html",
     "main.e6c13ad2.css.map": "/pac-handbook/static/css/main.e6c13ad2.css.map",
-    "main.f29589f0.js.map": "/pac-handbook/static/js/main.f29589f0.js.map",
+    "main.67afb63f.js.map": "/pac-handbook/static/js/main.67afb63f.js.map",
     "488.49047cac.chunk.js.map": "/pac-handbook/static/js/488.49047cac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.f29589f0.js"
+    "static/js/main.67afb63f.js"
   ]
 }
