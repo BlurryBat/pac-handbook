@@ -6,6 +6,7 @@ function HomePage({ pages, searchResults }) {
 
     return (
         <main style={mainStyle}>
+            <h1 style={proofReadingStyle}>PROOF READING REQUIRED</h1> {/* Add this line */}
             <h2>Index</h2>
             <ul>
                 {results.map((page, index) => (
@@ -22,5 +23,13 @@ function HomePage({ pages, searchResults }) {
 }
 
 const mainStyle = { padding: "20px" };
+
+const proofReadingStyle = {
+    textAlign: "center",
+    color: "red",
+    fontWeight: "bold",
+    fontSize: "20px",
+    marginBottom: "20px",
+};
 
 export default HomePage;
